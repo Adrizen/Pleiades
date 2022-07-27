@@ -9,7 +9,7 @@ class AppTheme {
     primaryColor: primaryColor,
 
     //AppBar theme.
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(color: primaryColor, elevation: 0),
   );
 
@@ -18,7 +18,7 @@ class AppTheme {
     primaryColor: secondaryColor,
 
     //AppBar theme.
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.black,
     appBarTheme: const AppBarTheme(color: secondaryColor, elevation: 0),
   );
 }

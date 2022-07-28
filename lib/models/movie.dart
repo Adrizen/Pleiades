@@ -35,7 +35,15 @@ class Movie {
 
   get fullPosterPath {
     if (posterPath != null) {
-      return 'https://image.tmdb.org/t/p/w500${this.posterPath}';
+      return 'https://image.tmdb.org/t/p/w500$posterPath';
+    } else {
+      return 'https://i.stack.imgur.com/GNhxO.png';
+    }
+  }
+
+  get fullBackdropPath {
+    if (posterPath != null) {
+      return 'https://image.tmdb.org/t/p/w500$backdropPath';
     } else {
       return 'https://i.stack.imgur.com/GNhxO.png';
     }

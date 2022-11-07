@@ -17,7 +17,9 @@ class DetailsScreen extends StatelessWidget {
             delegate: SliverChildListDelegate([
           _PosterAndTitle(movie: movie),
           _Overview(movie: movie),
-          CastingCards(movie: movie)
+          CastingCards(
+            movieId: movie.id,
+          )
         ]))
       ],
     ));
@@ -64,7 +66,6 @@ class _PosterAndTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-
     return Container(
       margin: const EdgeInsets.only(top: 20),
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -100,16 +101,20 @@ class _PosterAndTitle extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.star_outlined,
-                      size: 15,
-                      color: Colors.grey,
+                      size: 20,
+                      color: Colors.amber,
                     ),
                     const SizedBox(
                       width: 5,
                     ),
                     Text(
                       movie.voteAverage.toString(),
-                      style: textTheme.caption,
-                    )
+                      style: textTheme.bodyLarge,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text('Release: ${movie.releaseDate}')
                   ],
                 )
               ],

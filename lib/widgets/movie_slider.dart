@@ -68,7 +68,10 @@ class _MovieSliderState extends State<MovieSlider> {
               itemCount: widget.movies.length,
               itemBuilder: (_, int index) {
                 final movie = widget.movies[index];
-                return _MoviePoster(movie: movie, title: movie.title);
+                return _MoviePoster(
+                  movie: movie,
+                  title: movie.title,
+                );
               },
             ),
           )

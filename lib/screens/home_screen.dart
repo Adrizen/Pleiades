@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
                 SliverAppBar(
                   leading: const IconButton(
                       onPressed: funcion, icon: Icon(Icons.menu)),
-                  title: const Text('Antlia - A movie\'s cluster'),
+                  title: const Text('Pleiades'),
                   floating: true,
                   snap: true,
                   centerTitle: true,

@@ -12,30 +12,47 @@ class HomeScreen extends StatelessWidget {
     final moviesProvider = Provider.of<MoviesProvider>(context);
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text('MoviesApp')),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.search),
-              onPressed: (() => showSearch(
-                  context: context, delegate: MovieSearchDelegate())),
-            )
-          ],
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              CardSwiper(movies: moviesProvider.onDisplayMovies),
-              MovieSlider(
-                  movies: moviesProvider.popularMovies,
-                  tag: 'Hot',
-                  onNextPage: () => moviesProvider.getPopularMovies()),
-              MovieSlider(
-                  movies: moviesProvider.upcomingMovies,
-                  tag: 'Upcoming',
-                  onNextPage: () => moviesProvider.getUpcomingMovies()),
-            ],
-          ),
-        ));
+      body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                SliverAppBar(
+                  leading: const IconButton(
+                      onPressed: funcion, icon: Icon(Icons.menu)),
+                  title: const Text('Antlia - A movie\'s cluster'),
+                  floating: true,
+                  snap: true,
+                  centerTitle: true,
+                  elevation: 10,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(bottom: Radius.circular(20))),
+                  actions: [
+                    IconButton(
+                      icon: const Icon(Icons.search),
+                      onPressed: (() => showSearch(
+                          context: context, delegate: MovieSearchDelegate())),
+                    )
+                  ],
+                )
+              ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                CardSwiper(movies: moviesProvider.onDisplayMovies),
+                MovieSlider(
+                    movies: moviesProvider.popularMovies,
+                    tag: 'Hot',
+                    onNextPage: () => moviesProvider.getPopularMovies()),
+                MovieSlider(
+                    movies: moviesProvider.upcomingMovies,
+                    tag: 'Upcoming',
+                    onNextPage: () => moviesProvider.getUpcomingMovies()),
+              ],
+            ),
+          )),
+    );
   }
+}
+
+void funcion() {
+  //TODO: Hacer menu opciones / settings. Por ejemplo para cambiar de theme la app.
 }

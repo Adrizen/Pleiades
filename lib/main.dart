@@ -30,13 +30,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Movies app',
+      title: 'Antlia',
       initialRoute: 'home',
       routes: {
         'home': (_) => const HomeScreen(),
         'details': (_) => const DetailsScreen(),
       },
-      theme: AppTheme.lightTheme,
+      theme: AppTheme.darkTheme,
     );
   }
 }

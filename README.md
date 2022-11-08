@@ -1,10 +1,12 @@
-# Antlia - A movie's cluster.
+# Pleiades.
 
-A Flutter project of a movies/TV shows app to stay up to date with new releases.
+A Flutter project of a movies/TV shows* app to stay up to date with new releases.
 
-This app shows the lastest and upcoming movies/TV shows using [The Movie Data Base](https://www.themoviedb.org/) API.
+This app shows the lastest and upcoming movies/TV shows* using [The Movie Data Base](https://www.themoviedb.org/) API.
 
-Since the idea is to have a cluster or ["constellation"](https://en.wikipedia.org/wiki/Antlia) of data, there comes the name.
+The name comes from the [cluster](https://en.wikipedia.org/wiki/Pleiades) with the same name, since this app pretends to be a cluster of information to everyone.
+
+*: The app is still in a very early developing process and some features may not be implemented yet.
 
 # Dependencies
     "card_swiper: ^2.0.4",

@@ -16,9 +16,12 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData.light().copyWith(
     // Primary app color.
     primaryColor: secondaryColor,
-    textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.white)),
+    textTheme: const TextTheme(
+        //titleMedium: TextStyle(color: Colors.white),
+        headline6: TextStyle(color: Colors.black)),
+
     //AppBar theme.
-    scaffoldBackgroundColor: Color.fromARGB(255, 1, 11, 12),
+    scaffoldBackgroundColor: const Color.fromRGBO(1, 11, 12, 1),
     appBarTheme: const AppBarTheme(color: secondaryColor, elevation: 0),
   );
 }
